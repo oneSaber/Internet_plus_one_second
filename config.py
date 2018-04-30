@@ -6,10 +6,11 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config:
     SECRET_KEY = 'one more seconds'
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flask]'
     FLASKY_MAIL_SENDER = 'Flask Admin'
     FLASKY_ADMIN = ['megumi970202@gamil.com']
+    UPLOADED_PHOTOS_DEST  = os.path.join(basedir,'photos')
 
     @staticmethod
     def init_app(app):
@@ -35,3 +36,4 @@ config = {
     'testing': TestingConfig,
     'production': ProductionConfig,
     'default': DevelopmentConfig
+}
