@@ -1,4 +1,4 @@
-from ..models import User
+from ..models import User, AnonymousUser
 from .. import app, db,login_manager
 from . import main
 from flask import request, make_response, jsonify
@@ -9,7 +9,10 @@ login_manager.login_view = 'main.login'
 @main.route('/')
 def index():
     User_num = len(User.query.all())
-    return '<b>Hello index\n user:{}</b>'.format(User_num)
+    if current_user.is_authenticated:
+        return '<b>Hello {}</b>'.format(current_user.username)
+    else:
+        return '<b>Hello Stranger</b>'
 
 
 @main.route('/register',methods=['POST'])

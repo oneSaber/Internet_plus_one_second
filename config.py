@@ -9,7 +9,7 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flask]'
     FLASKY_MAIL_SENDER = 'Flask Admin'
-    FLASKY_ADMIN = ['megumi970202@gamil.com']
+    FLASKY_ADMIN = ['18798318100']
     UPLOADED_PHOTOS_DEST  = os.path.join(basedir,'photos')
 
     @staticmethod

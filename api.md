@@ -68,7 +68,7 @@
     'fail'，操作失败
 }
 
-6. 点赞/取消赞 '/collect' methods=['POST','DELETE']
+6. 收藏/取消收藏 '/collect' methods=['POST','DELETE']
 请求参数
 {
     参数名;参数类型;参数说明
